@@ -1,6 +1,6 @@
 # AI_Group7_ExpertSystem_Assignment2
 
-Drought Risk Assessment in Rwanda
+# Drought Risk Assessment in Rwanda
 Problem Definition
 Drought is a prolonged period of abnormally low rainfall, leading to water shortages that can 
 severely impact agriculture, food security, and livelihoods. In Rwanda, where agriculture is the 
