@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drought Prediction Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body style="background-color: #f4f4f4; color: #333;">
+    <h1>Drought Prediction Dashboard</h1>
+    
+    <h2>Input Local Data</h2>
+    <form action="/submit" method="post">
+        <label for="rainfall">Rainfall (mm):</label>
+        <input type="number" id="rainfall" name="rainfall" required>
+        <br>
+        <label for="crop_yield">Crop Yield (kg/ha):</label>
+        <input type="number" id="crop_yield" name="crop_yield" required>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>Historical Data</h2>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Rainfall (mm)</th>
+            <th>Crop Yield (kg/ha)</th>
+            <th>Drought Index</th>
+        </tr>
+        {% for index, row in historical_data.iterrows() %}
+        <tr>
+            <td>{{ row['date'].strftime('%Y-%m-%d') }}</td>
+            <td>{{ row['rainfall'] }}</td>
+            <td>{{ row['crop_yield'] }}</td>
+            <td>{{ row['drought_index'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
