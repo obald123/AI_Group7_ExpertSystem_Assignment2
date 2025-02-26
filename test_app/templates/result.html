@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Weather Result</title>
+</head>
+<body class="bg-gray-800 text-white">
+    <div class="container mx-auto p-5">
+        <h1 class="text-4xl font-bold mb-5">Weather Result</h1>
+        {% if error %}
+            <p class="text-red-500">{{ error }}</p>
+        {% elif data %}
+            <p>Location: {{ location }}</p>
+            <p>Address: {{ address }}</p>
+            <p>Current Temperature: {{ current_temperature }} °C</p>
+            <p>Drought Level: {{ data['Drought Level'] }}</p>
+            <p>Soil Moisture Advice: {{ data['Soil Moisture Advice'] }}</p>
+            <p>Temperature Advice: {{ data['Temperature Advice'] }}</p>
+        {% else %}
+            <p>No data available.</p>
+        {% endif %}
+        <a href="/home" class="text-blue-500 hover:underline">calculate Drought Forecast</a>
+        <a href="/" class="text-blue-500 hover:underline">Go Back</a>
+    </div>
+</body>
+</html>

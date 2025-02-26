@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drought Risk Assessment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Drought Risk Assessment</h1>
+    <form id="drought-form">
+        <label for="rainfall">Rainfall Data (comma-separated):</label>
+        <input type="text" id="rainfall" name="rainfall" required>
+        <label for="soil-moisture">Soil Moisture:</label>
+        <input type="number" id="soil-moisture" name="soil-moisture" required>
+        <label for="temperature">Temperature Data (comma-separated):</label>
+        <input type="text" id="temperature" name="temperature" required>
+        <button type="submit">Assess Drought Risk</button>
+    </form>
+    <div id="results"></div>
+    <script src="script.js"></script>
+</body>
+</html>
