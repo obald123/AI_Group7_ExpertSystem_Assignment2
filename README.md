@@ -7,3 +7,4 @@
 
 [![Binder](https://2i2c.mybinder.org/badge_logo.svg)](https://2i2c.mybinder.org/v2/gh/obald123/AI_Group7_ExpertSystem_Assignment2.git/HEAD)
 
+NOTE: codes are in "test_app" file
